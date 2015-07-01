@@ -45,7 +45,8 @@ h4 {
 
 .draw {
 	width: 100%;
-	-moz-transform: translate(50px, 50px);
+    overflow: visible;
+	-moz-transform: translate(-100px, -120px);
 }
 
 .world {
