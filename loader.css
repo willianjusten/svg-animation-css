@@ -1,0 +1,27 @@
+body {
+	background: #0562dc;
+}
+
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: auto;
+	transform: translate(-50%,-50%);
+	width: 200px;
+}
+
+.plane {
+	animation: spin 3s linear infinite;
+	fill: #FFF;
+	transform-origin: 50% 50%;
+}
+
+@keyframes spin{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
