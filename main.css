@@ -1,0 +1,62 @@
+body {
+	background: #E8F5FF;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: auto;
+	transform: translate(-50%,-50%);
+	width: 700px;
+}
+
+* {
+	transform-origin: 400px 400px;
+}
+
+svg {
+	width: 100%;
+}
+
+.world {
+ 	animation: spin-right 60s linear infinite;
+}
+
+.blue-plane,
+.red-plane,
+.green-plane {
+	animation: spin-left 20s linear infinite;
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3 {
+	animation: spin-right 80s linear infinite;
+}
+
+.sun {
+	animation: spin-right 120s linear infinite;
+}
+
+.baloon {
+	animation: spin-left 90s linear infinite;
+}
+
+@keyframes spin-left{
+	0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-right{
+	0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
