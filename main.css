@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background: #E8F5FF;
 }
@@ -7,7 +12,9 @@ body {
 	top: 50%;
 	left: 50%;
 	margin: auto;
+	-webkit-transform:translate(-50%,-50%);
 	transform: translate(-50%,-50%);
+	moz-transform: translate(0,0);
 	max-width: 700px;
 	width: 100%;
 }
@@ -19,6 +26,11 @@ body {
 	max-width: 590px;
 }
 
+h4 {
+	text-align: center;
+	margin-bottom:10px;
+}
+
 @media (max-width: 600px) {
 	.center iframe {
 		margin:10px auto;
@@ -26,36 +38,43 @@ body {
 	}
 }
 
-* {
+.draw * {
 	transform-origin: 400px 400px;
+	-webkit-transform-origin: 400px 400px;
 }
 
-svg {
+.draw {
 	width: 100%;
+	-moz-transform: translate(50px, 50px);
 }
 
 .world {
  	animation: spin-right 60s linear infinite;
+ 	-webkit-animation: spin-right 60s linear infinite;
 }
 
 .blue-plane,
 .red-plane,
 .green-plane {
 	animation: spin-left 20s linear infinite;
+	-webkit-animation: spin-left 20s linear infinite;
 }
 
 .cloud-1,
 .cloud-2,
 .cloud-3 {
 	animation: spin-right 80s linear infinite;
+	-webkit-animation: spin-right 80s linear infinite;
 }
 
 .sun {
 	animation: spin-right 120s linear infinite;
+	-webkit-animation: spin-right 120s linear infinite;
 }
 
 .baloon {
 	animation: spin-left 90s linear infinite;
+	-webkit-animation: spin-left 90s linear infinite;
 }
 
 @keyframes spin-left{
@@ -73,5 +92,23 @@ svg {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin-left{
+	0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spin-right{
+	0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
